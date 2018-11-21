@@ -6,7 +6,7 @@
     <item name="vs" type="id" />
     <item name="awayScore" type="id" />
     <item name="awayTeam" type="id" />
-    <item name="btn_notify" type="id" />
+    <item name="btn_notif" type="id" />
     <item name="league_spin" type="id" />
     <item name="rv_match_list" type="id" />
 </resources>

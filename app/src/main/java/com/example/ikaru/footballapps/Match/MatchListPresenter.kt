@@ -39,7 +39,7 @@ class MatchListPresenter(private val view: MatchListView,
             val data = bg {
                 gson.fromJson(apiRepository.doRequest(api), MatchResponse::class.java)
             }
-            view.showList(data.await().matches)
+            view.showList(data.await().events)
             view.hideLoading()
         }
     }

@@ -36,7 +36,7 @@ class MatchListAdapter(private val matches: List<Match>, private val listener: (
         private val homeScore: TextView = itemView.find(R.id.homeScore)
         private val awayTeam: TextView = itemView.find(R.id.awayTeam)
         private val awayScore: TextView = itemView.find(R.id.awayScore)
-        private val btnNotify: ImageButton = itemView.find(R.id.btn_notify)
+        private val btnNotify: ImageButton = itemView.find(R.id.btn_notif)
 
         @SuppressLint("SimpleDateFormat")
         fun bindItem(match: Match , listener: (Match) -> Unit){

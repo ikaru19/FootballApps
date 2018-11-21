@@ -70,9 +70,9 @@ class MatchListFragment: Fragment(), AnkoComponent<Context>, MatchListView {
         linearLayout {
             orientation = android.widget.LinearLayout.VERTICAL
             lparams(width = matchParent, height = matchParent)
-            topPadding = dip(16)
-            leftPadding = dip(16)
-            rightPadding = dip(16)
+            topPadding = dip(7)
+            leftPadding = dip(5)
+            rightPadding = dip(5)
 
             spinner = spinner {
                 id = R.id.league_spin
@@ -81,7 +81,7 @@ class MatchListFragment: Fragment(), AnkoComponent<Context>, MatchListView {
                     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                         val league = spinner.selectedItem as League
 
-                        leagueId = league.leagueId.orEmpty()
+                        leagueId = league.idLeague.orEmpty()
                         if(leagueId.isNotEmpty()){
                             presenter.getList(leagueId)
                         }

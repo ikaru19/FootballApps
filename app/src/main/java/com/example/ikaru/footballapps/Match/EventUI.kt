@@ -14,7 +14,7 @@ class EventUI : AnkoComponent<ViewGroup> {
         cardView {
             lparams(width = matchParent, height = wrapContent){
                 gravity = Gravity.CENTER
-                margin = dip(4)
+                margin = dip(2)
                 radius = 4f
             }
 
@@ -32,8 +32,8 @@ class EventUI : AnkoComponent<ViewGroup> {
                         centerInParent()
                     }
 
-                    imageButton(R.drawable.icons8_alarm_24){
-                        id = R.id.btn_notify
+                    imageButton(R.drawable.ic_notifications_active_black_24dp){
+                        id = R.id.btn_notif
                         backgroundColor = Color.WHITE
                         topPadding = dip(8)
                         rightPadding = dip(8)
@@ -108,7 +108,7 @@ class EventUI : AnkoComponent<ViewGroup> {
 
             }.lparams(width = matchParent, height = wrapContent){
                 gravity = Gravity.CENTER
-                bottomMargin = dip(8)
+                bottomMargin = dip(3)
             }
         }
     }
