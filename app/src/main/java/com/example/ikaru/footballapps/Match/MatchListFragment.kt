@@ -12,6 +12,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.example.ikaru.footballapps.Api.ApiRepository
+import com.example.ikaru.footballapps.Match.EventDetail.EventDetail
 import com.example.ikaru.footballapps.Model.League
 import com.example.ikaru.footballapps.Model.Match
 import com.example.ikaru.footballapps.R
@@ -52,7 +53,7 @@ class MatchListFragment: Fragment(), AnkoComponent<Context>, MatchListView {
         presenter.getLeague()
 
         adapter = MatchListAdapter(matches){
-        //    untuk nanti
+            startActivity<EventDetail>("EVENT" to it)
         }
 
         matchesList.adapter = adapter
@@ -73,6 +74,7 @@ class MatchListFragment: Fragment(), AnkoComponent<Context>, MatchListView {
             topPadding = dip(7)
             leftPadding = dip(5)
             rightPadding = dip(5)
+
 
             spinner = spinner {
                 id = R.id.league_spin

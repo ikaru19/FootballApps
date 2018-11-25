@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 @SuppressLint("SimpleDateFormat")
-fun  strTodate(strDate: String?, pattern: String= "yyyy-MM-dd"): Date {
+fun  strToDate(strDate: String?, pattern: String= "yyyy-MM-dd"): Date {
     val format = SimpleDateFormat(pattern)
     val date = format.parse(strDate)
 

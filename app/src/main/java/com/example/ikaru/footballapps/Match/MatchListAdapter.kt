@@ -13,7 +13,7 @@ import com.example.ikaru.footballapps.Model.Match
 import com.example.ikaru.footballapps.R
 import com.example.ikaru.footballapps.Util.changeFormatDate
 import com.example.ikaru.footballapps.Util.dateTimeToFormat
-import com.example.ikaru.footballapps.Util.strTodate
+import com.example.ikaru.footballapps.Util.strToDate
 import com.example.ikaru.footballapps.Util.toGMTFormat
 import org.jetbrains.anko.AnkoContext
 import org.jetbrains.anko.find
@@ -40,7 +40,7 @@ class MatchListAdapter(private val matches: List<Match>, private val listener: (
 
         @SuppressLint("SimpleDateFormat")
         fun bindItem(match: Match , listener: (Match) -> Unit){
-            val date = strTodate(match.dateEvent)
+            val date = strToDate(match.dateEvent)
             val dateTime = toGMTFormat(match.dateEvent,match.strTime)
             eventDate.text = changeFormatDate(date)
             eventTime.text = SimpleDateFormat("HH:mm").format(dateTime)

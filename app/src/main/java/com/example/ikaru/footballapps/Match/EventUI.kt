@@ -16,13 +16,14 @@ class EventUI : AnkoComponent<ViewGroup> {
                 gravity = Gravity.CENTER
                 margin = dip(2)
                 radius = 4f
+
             }
 
             linearLayout {
                 orientation = LinearLayout.VERTICAL
 
                 relativeLayout {
-                    textView("Minggu, 04 Maret 2018"){
+                    textView("Sun, 03 Nov 2018"){
                         id = R.id.date
                         textColorResource = R.color.colorPrimary
                         topPadding = dip(8)
@@ -46,7 +47,7 @@ class EventUI : AnkoComponent<ViewGroup> {
 
                 textView("21:00"){
                     id = R.id.time
-                    textSize = 10f
+                    textSize = 12f
                     textColorResource = R.color.colorPrimary
                     bottomPadding = dip(4)
 
@@ -62,8 +63,8 @@ class EventUI : AnkoComponent<ViewGroup> {
                         textColor = Color.BLACK
                         gravity = Gravity.END
                     }.lparams(width = wrapContent, height = wrapContent){
-                        leftOf(R.id.homeScore)
-                        rightMargin = dip(10)
+                        alignParentLeft()
+                        leftMargin = dip(10)
                     }
 
                     textView{
@@ -73,6 +74,7 @@ class EventUI : AnkoComponent<ViewGroup> {
                         textColor = Color.BLACK
                     }.lparams(width = wrapContent, height = wrapContent){
                         leftOf(R.id.vs)
+                        topMargin = dip(3)
                     }
 
                     textView("vs"){
@@ -83,6 +85,7 @@ class EventUI : AnkoComponent<ViewGroup> {
                         centerInParent()
                         leftMargin = dip(6)
                         rightMargin = dip(6)
+                        bottomMargin = dip(6)
                     }
 
                     textView{
@@ -92,6 +95,7 @@ class EventUI : AnkoComponent<ViewGroup> {
                         textColor = Color.BLACK
                     }.lparams(width = wrapContent, height = wrapContent){
                         rightOf(R.id.vs)
+                        topMargin = dip(3)
                     }
 
                     textView{
@@ -100,15 +104,15 @@ class EventUI : AnkoComponent<ViewGroup> {
                         textColor = Color.BLACK
                         gravity = Gravity.START
                     }.lparams(width = wrapContent, height = wrapContent){
-                        rightOf(R.id.awayScore)
-                        leftMargin = dip(10)
+                        alignParentRight()
+                        rightMargin = dip(10)
                     }
 
                 }.lparams(width = matchParent, height = wrapContent)
 
             }.lparams(width = matchParent, height = wrapContent){
                 gravity = Gravity.CENTER
-                bottomMargin = dip(3)
+                bottomMargin = dip(5)
             }
         }
     }
