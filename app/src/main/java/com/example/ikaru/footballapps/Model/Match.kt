@@ -7,6 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class Match(
     var idEvent: String? = null,
     var dateEvent: String? = null,
+    var strSport: String? = null,
     var strTime: String? = null,
     var strEvent: String? = null,
     var strHomeTeam: String? = null,
@@ -33,4 +34,5 @@ data class Match(
     var strAwayLineupForward: String? = null,
     var strHomeLineupSubstitutes: String? = null,
     var strAwayLineupSubstitutes: String? = null
+
     ) : Parcelable

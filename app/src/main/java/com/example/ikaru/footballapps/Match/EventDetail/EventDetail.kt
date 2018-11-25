@@ -72,8 +72,8 @@ class EventDetail : AppCompatActivity() , EventDetailView{
     //home
         Picasso.get().load(homeTeam.strTeamBadge).into(ivTeam1Logo)
         tvTeam1Name.text = homeTeam.strTeam
-//        if(match.intHomeScore.isNullOrEmpty()) tvTeam1Score.text = "-" else tvTeam1Score.text = match.intHomeShots
         if(match.intHomeShots.isNullOrEmpty()) home_shots.text = "-" else home_shots.text = match.intHomeShots
+        if(match.strHomeGoalDetails.isNullOrEmpty())  home_goal.text = "-" else home_goal.text = match.strHomeGoalDetails?.replace(";","\n")
         if(match.strHomeLineupGoalkeeper.isNullOrEmpty())  home_goalkeeper.text = "-" else home_goalkeeper.text = match.strHomeLineupGoalkeeper?.replace(";","\n")
         if(match.strHomeLineupDefense.isNullOrEmpty())  home_defense.text = "-" else home_defense.text = match.strHomeLineupDefense?.replace(";","\n")
         if(match.strHomeLineupMidfield.isNullOrEmpty())  home_midfield.text = "-" else home_midfield.text = match.strHomeLineupMidfield?.replace(";","\n")
@@ -82,8 +82,8 @@ class EventDetail : AppCompatActivity() , EventDetailView{
         //away
         Picasso.get().load(awayTeam.strTeamBadge).into(ivTeam2Logo)
         tvTeam2Name.text = match.strAwayTeam
-//        if(match.intAwayScore.isNullOrEmpty()) tvTeam2Score.text = "-" else tvTeam2Score.text = match.intAwayShots
         if(match.intAwayShots.isNullOrEmpty()) away_shots.text = "-" else away_shots.text = match.intAwayShots
+        if(match.strAwayGoalDetails.isNullOrEmpty())  away_goal.text = "-" else away_goal.text = match.strAwayGoalDetails?.replace(";","\n")
         if(match.strAwayLineupGoalkeeper.isNullOrEmpty())  away_goalkeeper.text = "-" else away_goalkeeper.text = match.strAwayLineupGoalkeeper?.replace(";","\n")
         if(match.strAwayLineupDefense.isNullOrEmpty())  away_defense.text = "-" else away_defense.text = match.strAwayLineupDefense?.replace(";","\n")
         if(match.strAwayLineupMidfield.isNullOrEmpty())  away_midfield.text = "-" else away_midfield.text = match.strAwayLineupMidfield?.replace(";","\n")

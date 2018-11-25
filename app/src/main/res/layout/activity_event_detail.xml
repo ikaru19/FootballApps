@@ -54,6 +54,7 @@
 
         <TextView
                 android:id="@+id/tvVs"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -134,13 +135,72 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-
-
                 app:layout_constraintRight_toRightOf="parent"
-
-
                 app:layout_constraintTop_toBottomOf="@+id/ivTeam2Logo"
                 tools:text="Away"/>
+        <android.support.constraint.Barrier
+                android:id="@+id/barrier2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvTeam1Name,tvTeam2Name"
+        />
+
+        <View
+                android:id="@+id/line3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        />
+
+        <TextView
+                android:id="@+id/home_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3"
+                tools:text="-"/>
+
+        <TextView
+                android:id="@+id/goal_txt"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Goals"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3"/>
+
+
+        <TextView
+                android:id="@+id/away_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3"
+                tools:text="-"/>
+
+
+
 
         <android.support.constraint.Barrier
                 android:id="@+id/barrier"
@@ -148,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:barrierDirection="bottom"
-                app:constraint_referenced_ids="tvTeam1Name,tvTeam2Name"
+                app:constraint_referenced_ids="home_goal,away_goal"
         />
 
         <View

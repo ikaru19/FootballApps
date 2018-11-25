@@ -9,4 +9,5 @@
     <item name="btn_notif" type="id" />
     <item name="league_spin" type="id" />
     <item name="rv_match_list" type="id" />
+    <item name="rv_search_list" type="id" />
 </resources>

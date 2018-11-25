@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Match.EventDetail.EventDetail"/>
-
+        <activity android:name=".Match.Search.MatchSearch"/>
     </application>
 
 </manifest>
