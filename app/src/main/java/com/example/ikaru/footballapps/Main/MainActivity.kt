@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import com.example.ikaru.footballapps.Match.MatchFragment
 import com.example.ikaru.footballapps.R
 import com.example.ikaru.footballapps.R.id.*
+import com.example.ikaru.footballapps.Teams.TeamFragment
+import com.example.ikaru.footballapps.Teams.TeamsView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     navigation_team -> {
                         supportActionBar?.show()
-                        //openFragment(TeamsFragment())
+                        createFragment(TeamFragment())
                         return@setOnNavigationItemSelectedListener true
                     }
                     navigation_favorite -> {

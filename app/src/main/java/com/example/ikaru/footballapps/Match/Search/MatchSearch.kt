@@ -29,7 +29,7 @@ class MatchSearch: AppCompatActivity(), MatchSearchView{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         val gson = Gson()
         presenter = MatchSearchPresenter(this,gson)
         adapter = MatchSearchAdapter(events){
@@ -40,8 +40,8 @@ class MatchSearch: AppCompatActivity(), MatchSearchView{
             lparams(width = matchParent, height = matchParent)
             orientation = LinearLayout.VERTICAL
             topPadding = dip(2)
-            leftPadding = dip(8)
-            rightPadding = dip(8)
+            leftPadding = dip(5)
+            rightPadding = dip(5)
 
             swipeRefresh = swipeRefreshLayout {
                 setColorSchemeResources(
@@ -102,7 +102,7 @@ class MatchSearch: AppCompatActivity(), MatchSearchView{
             }
 
             override fun onQueryTextChange(text: String?): Boolean {
-                if(text?.length!! > 2) {
+                if(text?.length!! > 1) {
                     query = text
                     presenter.getList(query)
                 }
